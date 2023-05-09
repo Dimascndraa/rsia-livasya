@@ -44,6 +44,13 @@ class DashboardFasilitasController extends Controller
      */
     public function store(Request $request)
     {
+
+        if ($request->unggulan) {
+            $unggulan = 1;
+        } else {
+            $unggulan = 0;
+        }
+
         $validatedData = $request->validate([
             'name' => 'required|max:255',
             'slug' => 'required|unique:fasilitas',
@@ -57,6 +64,7 @@ class DashboardFasilitasController extends Controller
         }
 
         $validatedData['excerpt'] = Str::limit(strip_tags($request->body), 500);
+        $validatedData['unggulan'] = $unggulan;
 
         Fasilitas::create($validatedData);
         return redirect('/dashboard/facility')->with('success', 'Fasilitas baru telah ditambahkan!');
@@ -105,6 +113,12 @@ class DashboardFasilitasController extends Controller
             'icon' => 'required',
         ];
 
+        if ($request->unggulan) {
+            $unggulan = 1;
+        } else {
+            $unggulan = 0;
+        }
+
         if ($request->slug != $facility->slug) {
             $rules['slug'] = 'required|unique:fasilitas';
         }
@@ -118,6 +132,7 @@ class DashboardFasilitasController extends Controller
 
             $validatedData['image'] = $request->file('image')->store('img-berita');
         }
+        $validatedData['unggulan'] = $unggulan;
 
         Fasilitas::where('id', $facility->id)->update($validatedData);
         return redirect('/dashboard/facility')->with('success', 'Fasilitas berhasil diubah!');

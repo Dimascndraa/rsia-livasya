@@ -22,7 +22,7 @@
                     <div class="card" style="border: none; border-radius: 20px">
                         <div class="card-body">
                             @if ($fasilitas->image)
-                            <img src="{{ asset('storage/' . $fasilitas->image) }}" class="img-fluid"
+                            <img src="{{ asset('public/' . $fasilitas->image) }}" class="img-fluid"
                                 alt="{{ $fasilitas->gambar }}" style="border: none; border-radius: 20px">
                             @else
                             <img src="https://source.unsplash.com/400x200/?{{ $fasilitas->name }}" class="img-fluid"

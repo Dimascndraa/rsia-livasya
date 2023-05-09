@@ -187,7 +187,8 @@ Route::get('/jadwal/{dokter:id}', [JadwalDokterController::class, 'show']);
 Route::get('/posts', [PostController::class, 'index']);
 Route::get('/posts/{post:slug}', [PostController::class, 'show']);
 Route::get('/fasilitas-unggulan', [FasilitasController::class, 'index']);
-Route::get('/fasilitas-unggulan/{fasilitas:slug}', [FasilitasController::class, 'show']);
+Route::get('/fasilitas-lainnya', [FasilitasController::class, 'lainnya']);
+Route::get('/fasilitas/{fasilitas:slug}', [FasilitasController::class, 'show']);
 
 
 // Route::get('/bukan-register', [RegisterController::class, 'index']);

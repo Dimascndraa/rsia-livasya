@@ -22,7 +22,7 @@
                     <div class="card" style="border: none; border-radius: 20px">
                         <div class="card-body">
                             <?php if($fasilitas->image): ?>
-                            <img src="<?php echo e(asset('storage/' . $fasilitas->image)); ?>" class="img-fluid"
+                            <img src="<?php echo e(asset('public/' . $fasilitas->image)); ?>" class="img-fluid"
                                 alt="<?php echo e($fasilitas->gambar); ?>" style="border: none; border-radius: 20px">
                             <?php else: ?>
                             <img src="https://source.unsplash.com/400x200/?<?php echo e($fasilitas->name); ?>" class="img-fluid"

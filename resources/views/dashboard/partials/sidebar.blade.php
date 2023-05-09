@@ -22,8 +22,7 @@
         <!-- SidebarSearch Form -->
         <div class="form-inline">
             <div class="input-group" data-widget="sidebar-search">
-                <input class="form-control form-control-sidebar" type="search" placeholder="Search"
-                    aria-label="Search">
+                <input class="form-control form-control-sidebar" type="search" placeholder="Search" aria-label="Search">
                 <div class="input-group-append">
                     <button class="btn btn-sidebar">
                         <i class="fas fa-search fa-fw"></i>
@@ -34,8 +33,7 @@
 
         <!-- Sidebar Menu -->
         <nav class="mt-2">
-            <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu"
-                data-accordion="false">
+            <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
                 <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
                 <li class="nav-item">
@@ -67,93 +65,93 @@
                 </li>
 
                 @can('admin')
-                    <li class="nav-item">
-                        <a href="/dashboard/facility"
-                            class="nav-link {{ Request::is('dashboard/facility*') ? 'active' : '' }}">
-                            <i class="nav-icon fas fa-clipboard-list"></i>
-                            <p>
-                                Fasilitas Unggulan
-                            </p>
-                        </a>
-                    </li>
+                <li class="nav-item">
+                    <a href="/dashboard/facility"
+                        class="nav-link {{ Request::is('dashboard/facility*') ? 'active' : '' }}">
+                        <i class="nav-icon fas fa-clipboard-list"></i>
+                        <p>
+                            Fasilitas
+                        </p>
+                    </a>
+                </li>
                 @endcan
 
                 @can('admin')
-                    <li class="nav-item">
-                        <a href="/dashboard/dokter" class="nav-link {{ Request::is('dashboard/dokter*') ? 'active' : '' }}">
-                            <i class="nav-icon fas fa-user-md"></i>
-                            <p>
-                                Dokter
-                            </p>
-                        </a>
-                    </li>
+                <li class="nav-item">
+                    <a href="/dashboard/dokter" class="nav-link {{ Request::is('dashboard/dokter*') ? 'active' : '' }}">
+                        <i class="nav-icon fas fa-user-md"></i>
+                        <p>
+                            Dokter
+                        </p>
+                    </a>
+                </li>
                 @endcan
 
                 @can('admin')
-                    <li class="nav-item">
-                        <a href="/dashboard/user" class="nav-link {{ Request::is('dashboard/user*') ? 'active' : '' }}">
-                            <i class="nav-icon fas fa-user-cog"></i>
-                            <p>
-                                Admin
-                            </p>
-                        </a>
-                    </li>
+                <li class="nav-item">
+                    <a href="/dashboard/user" class="nav-link {{ Request::is('dashboard/user*') ? 'active' : '' }}">
+                        <i class="nav-icon fas fa-user-cog"></i>
+                        <p>
+                            Admin
+                        </p>
+                    </a>
+                </li>
                 @endcan
 
                 @can('admin')
-                    <li class="nav-item mb-3 {{ request::is('dashboard/pages*') ? 'menu-is-opening menu-open' : '' }}">
-                        <a href="javascript:void(0)" class="nav-link">
-                            <i class="nav-icon fas fa-pager"></i>
-                            <p>
-                                Pages
-                                <i class="right fas fa-angle-left"></i>
-                            </p>
-                        </a>
-                        <ul class="nav nav-treeview">
-                            <li class="nav-item">
-                                <a href="/dashboard/pages/jumbotron"
-                                    class="nav-link {{ request::is('dashboard/pages/jumbotron') ? 'active' : '' }}">
-                                    <i class="fas fa-pager nav-icon"></i>
-                                    <p>Jumbotron</p>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="/dashboard/pages/pelayanan"
-                                    class="nav-link {{ request::is('dashboard/pages/pelayanan') ? 'active' : '' }}">
-                                    <i class="fas fa-concierge-bell nav-icon"></i>
-                                    <p>Pelayanan</p>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="/dashboard/pages/about"
-                                    class="nav-link {{ request::is('dashboard/pages/about') ? 'active' : '' }}">
-                                    <i class="fas fa-info-circle nav-icon"></i>
-                                    <p>Identitas</p>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="/dashboard/pages/gallery"
-                                    class="nav-link {{ request::is('dashboard/pages/gallery') ? 'active' : '' }}">
-                                    <i class="fas fa-images nav-icon"></i>
-                                    <p>Gallery</p>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="/dashboard/pages/jadwal"
-                                    class="nav-link {{ request::is('dashboard/pages/jadwal') ? 'active' : '' }}">
-                                    <i class="far fa-calendar-alt nav-icon"></i>
-                                    <p>Jadwal</p>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="/dashboard/pages/review"
-                                    class="nav-link {{ request::is('dashboard/pages/review') ? 'active' : '' }}">
-                                    <i class="fas fa-user-check nav-icon"></i>
-                                    <p>Review</p>
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
+                <li class="nav-item mb-3 {{ request::is('dashboard/pages*') ? 'menu-is-opening menu-open' : '' }}">
+                    <a href="javascript:void(0)" class="nav-link">
+                        <i class="nav-icon fas fa-pager"></i>
+                        <p>
+                            Pages
+                            <i class="right fas fa-angle-left"></i>
+                        </p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                            <a href="/dashboard/pages/jumbotron"
+                                class="nav-link {{ request::is('dashboard/pages/jumbotron') ? 'active' : '' }}">
+                                <i class="fas fa-pager nav-icon"></i>
+                                <p>Jumbotron</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/dashboard/pages/pelayanan"
+                                class="nav-link {{ request::is('dashboard/pages/pelayanan') ? 'active' : '' }}">
+                                <i class="fas fa-concierge-bell nav-icon"></i>
+                                <p>Pelayanan</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/dashboard/pages/about"
+                                class="nav-link {{ request::is('dashboard/pages/about') ? 'active' : '' }}">
+                                <i class="fas fa-info-circle nav-icon"></i>
+                                <p>Identitas</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/dashboard/pages/gallery"
+                                class="nav-link {{ request::is('dashboard/pages/gallery') ? 'active' : '' }}">
+                                <i class="fas fa-images nav-icon"></i>
+                                <p>Gallery</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/dashboard/pages/jadwal"
+                                class="nav-link {{ request::is('dashboard/pages/jadwal') ? 'active' : '' }}">
+                                <i class="far fa-calendar-alt nav-icon"></i>
+                                <p>Jadwal</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/dashboard/pages/review"
+                                class="nav-link {{ request::is('dashboard/pages/review') ? 'active' : '' }}">
+                                <i class="fas fa-user-check nav-icon"></i>
+                                <p>Review</p>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
                 @endcan
 
                 <hr class="dropdown-divider w-75 m-auto" style="opacity: .3">

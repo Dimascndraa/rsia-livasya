@@ -16,7 +16,18 @@ class FasilitasController extends Controller
             'name' => $about->nama_instansi,
             'about' => About::all(),
             'pelayanan' => Pelayanan::all(),
-            'facilities' => Fasilitas::all()
+            'facilities' => Fasilitas::where('unggulan', 1)->get()
+        ]);
+    }
+
+    public function lainnya(About $about)
+    {
+        return view('fasilitas.index', [
+            'title' => 'Fasilitas Lainnya',
+            'name' => $about->nama_instansi,
+            'about' => About::all(),
+            'pelayanan' => Pelayanan::all(),
+            'facilities' => Fasilitas::where('unggulan', 0)->get()
         ]);
     }
 
