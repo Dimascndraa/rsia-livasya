@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Category;
 use App\Models\Dokter;
+use App\Models\Fasilitas;
 use App\Models\Pelayanan;
 use App\Models\Post;
 use App\Models\Review;
@@ -19,6 +20,7 @@ class DashboardController extends Controller
             'kategori_berita' => Category::all(),
             'dokter' => Dokter::all(),
             'review' => Review::all(),
+            'facility' => Fasilitas::all(),
             'pelayanan' => Pelayanan::all()
         ]);
     }
